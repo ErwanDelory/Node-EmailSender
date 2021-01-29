@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 const { Eleve } = require('./retardEleve');
+const { Tuteur } = require('./retardTuteur');
 
 const getEmailData = (to, name, template) => {
   let data = null;
@@ -19,7 +20,7 @@ const getEmailData = (to, name, template) => {
         from: 'PFE Polystage <pfepolystage@gmail.com>',
         to,
         subject: `Retard tuteur: ${name}`,
-        html: Eleve(),
+        html: Tuteur(),
       };
       break;
 
